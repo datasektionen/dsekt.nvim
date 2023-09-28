@@ -8,16 +8,25 @@ local config = {
 }
 
 local function set_hl(group, values)
-    local style = ""
+    local style = ''
+    if values.fg then
+        style = style .. 'guifg=' .. values.fg .. ' '
+    end
+    if values.bg then
+        style = style .. 'guibg=' .. values.bg .. ' '
+    end
     for k, v in pairs(values) do
-        if k == 'fg' or k == 'bg' then
-            style = style .. k .. '=' .. v .. ' '
-        elseif v == true then
-            style = style .. k .. ' '
+        if k ~= 'fg' and k ~= 'bg' then
+            if v == true then
+                style = style .. k .. ' '
+            else
+                style = style .. k .. '=' .. v .. ' '
+            end
         end
     end
     vim.cmd('hi ' .. group .. ' ' .. style)
 end
+
 
 
 dsekt.set_colorscheme = function()
