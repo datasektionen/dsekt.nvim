@@ -11,8 +11,6 @@ local function set_hl(group, values)
     vim.api.nvim_set_hl(0, group, values)
 end
 
-
-
 dsekt.set_colorscheme = function()
 
     -- Neovim UI
@@ -118,7 +116,6 @@ dsekt.set_colorscheme = function()
 
     -- Markdown Highlighting
     set_hl("mkdCode", {fg=colors.builtin})
-
 end
 
 return dsekt
