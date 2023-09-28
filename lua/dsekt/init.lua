@@ -8,11 +8,20 @@ local config = {
 }
 
 local function set_hl(group, values)
-    vim.api.nvim_set_hl(group, values)
+    local style = ""
+    for k, v in pairs(values) do
+        if k == 'fg' or k == 'bg' then
+            style = style .. k .. '=' .. v .. ' '
+        elseif v == true then
+            style = style .. k .. ' '
+        end
+    end
+    vim.cmd('hi ' .. group .. ' ' .. style)
 end
 
+
 dsekt.set_colorscheme = function()
-    
+
     -- Neovim UI
     set_hl("Normal", {fg=colors.fg, bg=colors.bg})
     set_hl("Cursor", {fg=colors.bg, bg=colors.fg})
