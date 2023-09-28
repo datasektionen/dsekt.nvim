@@ -84,7 +84,7 @@ dsekt.set_colorscheme = function()
     set_hl("String", {fg=colors.str})
     set_hl("Tag", {fg=colors.keyword})
     set_hl("Title", {fg=colors.fg, bold=true})
-    set_hl("Todo", {fg=colors.fg2, inverse=true, bold=true})
+    set_hl("Todo", {fg=colors.bg, bg=colors.fg2, bold=true})
     set_hl("Type", {fg=colors.type})
     set_hl("Underlined", {underline=true})
 
