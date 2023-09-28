@@ -1,5 +1,5 @@
 " Vim color file
-" Data
+" dsekt
 " Created by DAD
 
 hi clear
