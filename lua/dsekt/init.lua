@@ -15,6 +15,7 @@ dsekt.set_colorscheme = function()
 
     -- Neovim UI
     set_hl("Normal", {fg=colors.fg, bg=colors.bg})
+    set_hl("EndOfBuffer", {fg=colors.bg4, bg=colors.bg})
     set_hl("Cursor", {fg=colors.bg, bg=colors.fg})
     set_hl("CursorLine", {bg=colors.bg2})
     set_hl("CursorLineNr", {fg=colors.str, bg=colors.bg})
