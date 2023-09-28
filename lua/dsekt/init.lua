@@ -8,23 +8,6 @@ local config = {
 }
 
 local function set_hl(group, values)
-    -- local style = ''
-    -- if values.fg then
-    --     style = style .. 'guifg=' .. values.fg .. ' '
-    -- end
-    -- if values.bg then
-    --     style = style .. 'guibg=' .. values.bg .. ' '
-    -- end
-    -- for k, v in pairs(values) do
-    --     if k ~= 'fg' and k ~= 'bg' then
-    --         if v == true then
-    --             style = style .. k .. ' '
-    --         else
-    --             style = style .. k .. '=' .. v .. ' '
-    --         end
-    --     end
-    -- end
-    -- vim.cmd('hi ' .. group .. ' ' .. style)
     vim.api.nvim_set_hl(0, group, values)
 end
 
