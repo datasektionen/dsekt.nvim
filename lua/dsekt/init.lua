@@ -11,12 +11,11 @@ local function set_hl(group, values)
     vim.api.nvim_set_hl(0, group, values)
 end
 
-
-
 dsekt.set_colorscheme = function()
 
     -- Neovim UI
     set_hl("Normal", {fg=colors.fg, bg=colors.bg})
+    set_hl("EndOfBuffer", {fg=colors.bg4, bg=colors.bg})
     set_hl("Cursor", {fg=colors.bg, bg=colors.fg})
     set_hl("CursorLine", {bg=colors.bg2})
     set_hl("CursorLineNr", {fg=colors.str, bg=colors.bg})
@@ -24,7 +23,7 @@ dsekt.set_colorscheme = function()
     set_hl("ColorColumn", {bg=colors.bg2})
     set_hl("FoldColumn", {fg=colors.comment, bg=colors.bg2})
     set_hl("SignColumn", {fg=colors.comment, bg=colors.bg2})
-    set_hl("LineNr", {fg=colors.fg2, bg=colors.bg2})
+    set_hl("LineNr", {fg=colors.fg2, bg=colors.bg})
     set_hl("CursorLineNr", {fg=colors.fg, bg=colors.bg2})
     set_hl("VertSplit", {fg=colors.fg3, bg=colors.bg3})
     set_hl("MatchParen", {fg=colors.warning2, underline=true})
@@ -118,7 +117,6 @@ dsekt.set_colorscheme = function()
 
     -- Markdown Highlighting
     set_hl("mkdCode", {fg=colors.builtin})
-
 end
 
 return dsekt
