@@ -5,10 +5,13 @@
 
 ### Installation
 
-Using `packer`
+Using `lazy`
 
 ```
-use "datasektionen/dsekt.nvim"
+{
+    "datasektionen/dsekt.nvim",
+    priority = 1000,
+}
 ```
 
 ### Credits
